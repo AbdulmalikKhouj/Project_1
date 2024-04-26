@@ -1,0 +1,17 @@
+<!-- templates/contact-us.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h2>Contact Us</h2>
+  <form action="/submit-message" method="post">
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}
