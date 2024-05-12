@@ -1,0 +1,20 @@
+[
+  {
+    "brand": "Samsung",
+    "model": "Galaxy S21",
+    "price": 999,
+    "image": "static/Image/Samsung-Galaxy-A22-5G-600x600.jpg"
+  },
+  {
+    "brand": "Apple",
+    "model": "iPhone 13 Pro",
+    "price": 1099,
+    "image": "static/Image/iphone.jpg"
+  },
+  {
+    "brand": "Motorollo",
+    "model": "Pixel 6",
+    "price": 799,
+    "image": "static/Image/Motorollo.jpg"
+  }
+]

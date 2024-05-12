@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Post</title>
+    <style>
+        img {
+            display: block;
+            margin: 0 auto; /* Center the image horizontally */
+            max-width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="/get_single_post" method="GET">
+        <label for="post_id">Enter Post ID:</label>
+        <input type="text" id="post_id" name="post_id">
+        <button type="submit">Fetch Post</button>
+    </form>
+
+    {% if post %}
+        {% if post[0] != 1 %}
+            <h2>{{ post[1] }}</h2>
+            <img src="{{ post[3] }}" alt="Post Image">
+            <p>{{ post[2] }}</p>
+        {% endif %}
+    {% else %}
+        <p>No post found with the specified ID.</p>
+    {% endif %}
+</body>
+</html>

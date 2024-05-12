@@ -3,7 +3,47 @@
 
 {% block content %}
 <div class="container">
-  <h2>Home</h2>
-  <p>Welcome to our website!</p>
+  <!-- Hero Section with Background Image -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Our MobAccess Showroom</h1>
+      <p>Discover the latest and greatest in MobAccess!</p>
+      <a href="{{ url_for('all_posts') }}" class="btn btn-primary">CheckAll Products</a>
+      <a href="{{ url_for('get_single_post') }}" class="btn btn-secondary">Filter</a>
+    </div>
+  </section>
+
+  <!-- Mobile Accessories Section -->
+  <section class="MobAccess-accessories mt-5">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="static/Image/HeadPhone.jpg" class="card-img-top" alt="Wireless Headphones">
+          <div class="card-body">
+            <h5 class="card-title">Wireless Headphones</h5>
+            <p class="card-text">Immerse yourself in music with these high-quality wireless headphones.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="static/Image/Smartwatch.jpg" class="card-img-top" alt="Smartwatch">
+          <div class="card-body">
+            <h5 class="card-title">Smartwatch</h5>
+            <p class="card-text">Stay connected and track your fitness goals with this sleek smartwatch.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="static/Image/WirelessSpeaker.jpg" class="card-img-top" alt="Wireless Speaker">
+          <div class="card-body">
+            <h5 class="card-title">Wireless Speaker</h5>
+            <p class="card-text">Enjoy crystal-clear sound with this portable wireless speaker, perfect for outdoor gatherings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 {% endblock %}

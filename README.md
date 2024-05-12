@@ -1,16 +1,21 @@
-# Email Management 
+# Mobile Accessories Store
+
+Welcome to the Mobile Accessories Store project! This project aims to provide a platform for users to browse and purchase various accessories for their mobile devices.
 
 ## Introduction
-The Email Management System is a web application built with Python Flask. It aims to manage the operations and tasks related to email sending, receiving, and management. This system simplifies the process of managing emails, from sending to receiving, by providing an efficient and user-friendly platform.
+The Mobile Accessories Store simplifies the process of finding and buying mobile accessories by offering a user-friendly interface and efficient management of product listings. Whether users are looking for cases, chargers, screen protectors, or other accessories, this platform aims to provide a seamless shopping experience.
 
 ## How to Run the Web Application
 To run the Email Management System on your local machine, follow these steps:
 
 ### Prerequisites
-- Python 3.11.0
-- Flask
-- Virtualenv
-
+- Python 3.11.0: The updated python versio is utilized in this project.
+- Virtualenv: The virtual environment is utlized in this project for managing unnessary memory  consuption. 
+- Python Flask: This is a Python web framework that integrated with python and flask.
+- HTML/CSS/JavaScript/JSON/JQuery: These are mainly worked in frontend part for user interactivity.
+- SQLite3: The lightweight database is utilized for storing and manupulating the data. 
+- Flask-Mail: By using this functionality, the email transaction is achieved. 
+- Waitress: WSGI server is utilized for deploying the Flask web application. 
 ### Installation
 1. Clone the repository:
    
@@ -18,7 +23,7 @@ To run the Email Management System on your local machine, follow these steps:
 
 2. Navigate to the project directory:
    
-    cd email-management
+    cd PROJECT_TASK-MAIN
    
 3. Create and activate a virtual environment:
    

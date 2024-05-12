@@ -1,0 +1,47 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Data</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include the JS data file -->
+    <script src="static/mobile-data.js"></script>
+    <style>
+        /* Custom CSS to display cards horizontally */
+        #mobile-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: calc(25% - 20px); /* Adjust width as needed */
+            margin: 0 10px 20px 10px; /* Adjust margin as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5" id="mobile-list"></div>
+
+    <script>
+        window.onload = function() {
+            const container = document.getElementById('mobile-list');
+            for (let i = 0; i < mobileData.length; i++) {
+                const data = mobileData[i];
+                const cardHtml = `
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${data.brand}</h5>
+                            <p class="card-text">${data.model} - ${data.price}</p>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHtml;
+            }
+        }
+    </script>
+
+    <!-- Link to recqres-data.html -->
+    <div class="text-center mt-4">
+        <a class="navbar-brand" href="{{ url_for('recqres_data') }}">Recqres Data</a>
+    </div>
+    
+</body>

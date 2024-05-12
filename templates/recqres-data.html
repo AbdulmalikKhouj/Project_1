@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recqres Data</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom CSS -->
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            padding: 20px; /* Add padding */
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .card-text {
+            color: #666;
+        }
+        .card-img {
+            max-height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Mobile Phones</h1>
+        <div class="row" id="mobileList"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            const mobileListContainer = $('#mobileList');
+
+            // Use AJAX to load the JSON data from mobile-data.json
+            $.ajax({
+                url: 'static/mobile-data.json',
+                dataType: 'json',
+                success: function(data) {
+                    // Loop through the data array and generate HTML for each item
+                    data.forEach(mobile => {
+                        const mobileCard = $('<div></div>').addClass('col-md-4');
+                        const cardHTML = `
+                            <div class="card">
+                                <img src="${mobile.image}" class="card-img-top" alt="${mobile.brand} ${mobile.model}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${mobile.brand}</h5>
+                                    <p class="card-text">Model: ${mobile.model}</p>
+                                    <p class="card-text">Price: $${mobile.price}</p>
+                                </div>
+                            </div>
+                        `;
+                        mobileCard.html(cardHTML);
+                        mobileListContainer.append(mobileCard);
+                    });
+                },
+                error: function() {
+                    console.log('Error fetching data');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

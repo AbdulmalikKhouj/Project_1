@@ -1,0 +1,17 @@
+# Virtual Environment
+venv/
+
+# IDE (e.g. PyCharm, VSCode, etc.)
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Dependency directories
+.env
+lib/
+lib64/
+include/
+bin/

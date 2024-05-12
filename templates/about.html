@@ -4,108 +4,132 @@
 {% block title %}About Us{% endblock %}
 
 {% block content %}
+<div class="container">
+  <!-- Introduction Section -->
+  <section class="about-intro">
+    <h2 class="section-title">Welcome to Our Mobile Accessories Store</h2>
+    <p class="section-description">At MobAccess, we're passionate about enhancing your mobile experience with our premium accessories.</p>
+  </section>
+
+  <!-- Mission and Vision Section -->
+  <section class="mission-vision-section">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="section-subtitle">Our Mission</h3>
+        <p class="section-text">We aim to provide innovative and high-quality mobile accessories that blend functionality with style, ensuring customer satisfaction and loyalty.</p>
+      </div>
+      <div class="col-md-6">
+        <h3 class="section-subtitle">Our Vision</h3>
+        <p class="section-text">To become a trusted global brand known for our commitment to excellence, customer-centric approach, and continuous innovation in the mobile accessories industry.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Our Team Section -->
+  <section class="team-section">
+    <h3 class="section-title">Meet Our Team</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='Image/team-member1.jpg') }}" alt="Team Member 1">
+          <h4 class="member-name">Abdulmalik</h4>
+          <p class="member-role">CEO</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='Image/team-member2.jpg') }}" alt="Team Member 2">
+          <h4 class="member-name">Saif Alghamdi</h4>
+          <p class="member-role">CTO</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='Image/team-member3.jpg') }}" alt="Team Member 3">
+          <h4 class="member-name">Ahmed Alghamdi</h4>
+          <p class="member-role">CFO</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='Image/team-member4.jpg') }}" alt="Team Member 4">
+          <h4 class="member-name">Ahmed Alghamdi</h4>
+          <p class="member-role">Co-Organizer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Services Section -->
+  <section class="services-section">
+    <h3 class="section-title">Our Services</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-item">
+          <i class="fas fa-charging-station fa-3x"></i>
+          <img src="{{ url_for('static', filename='Image/charger.jpg') }}" alt="Chargers & Cables" width="100" height="100">
+          <p><b>Chargers & Cables</b><br>We offer a wide variety of high-quality chargers and cables to keep your mobile devices powered up.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-item">
+          <i class="fas fa-headphones fa-3x"></i>
+          <img src="{{ url_for('static', filename='Image/headphone.jpg') }}" alt="Headphones" width="100" height="100">
+          <p><b>Headphones</b><br>Enhance your audio experience with our selection of top-rated headphones, from budget-friendly to premium noise-cancelling options.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-item">
+          <img src="https://fakeimg.pl/100x100/?text=Fake Image" alt="Batteries" width="100" height="100">
+          <p><b>Batteries</b><br>Keep your devices running with our high-performance batteries.</p>
+        </div>
+      </div>
+  
+    </div>
+    </div>
+  </section>
+</div>
+
 <style>
-    /* CSS for styling */
-    .image {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
+/* CSS for styling */
+.about-intro {
+  margin-bottom: 40px;
+}
+
+.mission-vision-section {
+  margin-bottom: 40px;
+}
+
+.team-section .team-member img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.services-section {
+  margin-bottom: 40px;
+}
+
+.service-item {
+  text-align: center;
+}
+
+.service-item i {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.services-section {
+      margin-bottom: 40px;
+    }
+
+    .service-item {
+      text-align: center;
+    }
+
+    .service-item i {
+      display: block;
       margin-bottom: 10px;
     }
 </style>
-<div class="container">
-  <h2>About Us</h2>
-  <p>Welcome to our company's about page. We are dedicated to providing excellent services to our clients.</p>
-  <div class="row">
-    <div class="col-md-6">
-      <h3>Our Mission</h3>
-      <p>We strive to deliver the best products and services to our customers, ensuring their satisfaction and success.</p>
-    </div>
-    <div class="col-md-6">
-      <h3>Our Vision</h3>
-      <p>To become the leading company in our industry by exceeding customer expectations and fostering innovation.</p>
-    </div>
-  </div>
-  <hr>
-  <h3>Meet Our Team</h3>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <img src="{{ url_for('static', filename='Image/team-member1.jpg') }}" class="card-img-top" alt="Team Member 1" style="height: 100px; object-fit: cover;">
-        <div class="card-body">
-          <h5 class="card-title">Abdulmalik</h5>
-          <p class="card-text">CEO</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="{{ url_for('static', filename='Image/team-member2.jpg') }}" class="card-img-top" alt="Team Member 2" style="height: 100px; object-fit: cover;">
-        <div class="card-body">
-          <h5 class="card-title">Saif Alghamdi</h5>
-          <p class="card-text">CTO</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="{{ url_for('static', filename='Image/team-member3.jpg') }}" class="card-img-top" alt="Team Member 3" style="height: 100px; object-fit: cover;">
-        <div class="card-body">
-          <h5 class="card-title">Ahmed Alghamdi</h5>
-          <p class="card-text">CFO</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">         
-        <img src="{{ url_for('static', filename='Image/team-member4.jpg') }}" class="card-img-top" alt="Team Member 4" style="height: 100px; object-fit: cover;">
 
-        <div class="card-body">
-          <h5 class="card-title">Ahmed Alghamdi</h5>
-          <p class="card-text">Co-Organizer</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Use fake images All non-available images should be placed and resized with fake images generated by https://fakeimg.pl -->
-    <div class="col-md-4">
-      <div class="card">         
-        <img src="https://fakeimg.pl/300x200/" class="card-img-top" alt="Fake Image" style="height: 100px; object-fit: cover;">
-
-        <div class="card-body">
-          <h5 class="card-title">Fake Image</h5>
-          <p class="card-text">Fake</p>
-        </div>
-      </div>
-    </div>
-    <!-- Use fake images All non-available images should be placed and resized with fake images generated by https://fakeimg.pl -->
-  </div>
-  <hr>
-
-  <!-- Font Awesome Icons -->
-  <h3>Our Services</h3>
-  <div class="row">
-    <div class="col-md-2">
-      <i class="fas fa-desktop fa-3x"></i>
-      <p>Web Development</p>
-    </div>
-    <div class="col-md-2">
-      <i class="fas fa-mobile-alt fa-3x"></i>
-      <p>Mobile Development</p>
-    </div>
-    <div class="col-md-2">
-      <i class="fas fa-chart-line fa-3x"></i>
-      <p>Business Analysis</p>
-    </div>
-    <div class="col-md-2">
-      <i class="fas fa-cogs fa-3x"></i>
-      <p>Technical Support</p>
-    </div>
-    <div class="col-md-2">
-      <i class="fas fa-users fa-3x"></i>
-      <p>Customer Service</p>
-    </div>
-  </div>
-  <!-- End of Font Awesome Icons -->
-</div>
 {% endblock %}

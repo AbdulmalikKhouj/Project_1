@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Arrival</title>
+    <style>
+        .post {
+            margin-bottom: 20px;
+            text-align: center; /* Align content to center */
+            padding: 20px; /* Add padding */
+            border: 1px solid #ddd; /* Add border */
+            border-radius: 10px; /* Add border radius */
+        }
+        .post img {
+            max-width: 50%;
+            height: auto;
+            margin-bottom: 10px; /* Add margin bottom to image */
+        }
+    </style>
+</head>
+<body>
+
+    {% for post in posts[1:] %}
+        <div class="post">
+            <h2>{{ post[1] }}</h2>
+            <img src="{{ post[3] }}" alt="Post Image" width="50%" height="50%">
+            <p>{{ post[2] }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
+{% endblock %}
